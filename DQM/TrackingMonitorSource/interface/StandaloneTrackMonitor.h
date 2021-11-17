@@ -97,16 +97,30 @@ private:
   MonitorElement* trackorigalgoH_;
 
   MonitorElement* DistanceOfClosestApproachToPVH_;
+  MonitorElement* DistanceOfClosestApproachToPVVsPtH_;
+  MonitorElement* DistanceOfClosestApproachToPVVsEtaH_;
   MonitorElement* DistanceOfClosestApproachToPVVsPhiH_;
   MonitorElement* xPointOfClosestApproachVsZ0wrtPVH_;
   MonitorElement* yPointOfClosestApproachVsZ0wrtPVH_;
 
+  MonitorElement* ip2dToPVH_;
+  MonitorElement* iperr2dToPVH_;
   MonitorElement* ip3dToPVH_;
   MonitorElement* iperr3dToPVH_;
   MonitorElement* sip3dToPVH_;
   MonitorElement* sip2dToPVH_;
   MonitorElement* sipDxyToPVH_;
   MonitorElement* sipDzToPVH_;
+
+  MonitorElement* ip2dToBSH_;
+  MonitorElement* sip2dToBSH_;
+  
+  MonitorElement* dcaForPt4to5H_;
+  MonitorElement* dcaForPt14to15H_;
+  MonitorElement* dcaForPt49to50H_;
+  MonitorElement* ip2dForPt4to5H_;
+  MonitorElement* ip2dForPt14to15H_;
+  MonitorElement* ip2dForPt49to50H_;
 
   MonitorElement* nvalidTrackerHitsH_;
   MonitorElement* nvalidPixelHitsH_;

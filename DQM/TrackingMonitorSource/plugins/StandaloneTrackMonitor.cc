@@ -252,17 +252,33 @@ void StandaloneTrackMonitor::bookHistograms(DQMStore::IBooker &ibook, edm::Run c
     trackalgoH_ = ibook.book1D("trackalgo", "Track Algo",50,0.0,50.0);
     trackorigalgoH_ = ibook.book1D("trackorigalgo", "Track Original Algo",50,0.0,50.0);
     DistanceOfClosestApproachToPVH_ = ibook.book1D("DistanceOfClosestApproachToPV", "DistanceOfClosestApproachToPV",1000,-1.0,1.0);
+    DistanceOfClosestApproachToPVVsPtH_ = ibook.bookProfile("DistanceOfClosestApproachToPVVsPt", "DistanceOfClosestApproachToPVVsPt",100,0.,100.,0.0,0.0,"g");
+    DistanceOfClosestApproachToPVVsEtaH_ = ibook.bookProfile("DistanceOfClosestApproachToPVVsEta", "DistanceOfClosestApproachToPVVsEta",60,-3.,3.,0.0,0.0,"g");
     DistanceOfClosestApproachToPVVsPhiH_ = ibook.bookProfile("DistanceOfClosestApproachToPVVsPhi", "DistanceOfClosestApproachToPVVsPhi",100,-3.5,3.5,0.0,0.0,"g");
     xPointOfClosestApproachVsZ0wrtPVH_ = ibook.bookProfile("xPointOfClosestApproachVsZ0wrtPV", "xPointOfClosestApproachVsZ0wrtPV",120,-60,60,0.0,0.0,"g");
     yPointOfClosestApproachVsZ0wrtPVH_ = ibook.bookProfile("yPointOfClosestApproachVsZ0wrtPV", "yPointOfClosestApproachVsZ0wrtPV",120,-60,60,0.0,0.0,"g");
     
+    ip2dToPVH_ = ibook.book1D("ip2dToPV", "IP in 2d To PV",1000,-1.0,1.0);
+    iperr2dToPVH_ = ibook.book1D("iperr2dToPV", "IP error in 2d To PV",50,0,4);
+
     ip3dToPVH_ = ibook.book1D("ip3dToPV", "IP in 3d To PV",200,-20,20);
     iperr3dToPVH_ = ibook.book1D("iperr3dToPV", "IP error in 3d To PV",100,0,5);
     sip3dToPVH_ = ibook.book1D("sip3dToPV", "IP significance in 3d To PV",200,-10,10);
     sip2dToPVH_ = ibook.book1D("sip2dToPV", "IP significance in 2d To PV",200,-10,10);
     sipDxyToPVH_ = ibook.book1D("sipDxyToPV", "IP significance in dxy To PV",100,-10,10);
     sipDzToPVH_ = ibook.book1D("sipDzToPV", "IP significance in dz To PV",100,-10,10);
-    
+
+    ip2dToBSH_ = ibook.book1D("ip2dToBS", "IP in 2d To BS",1000,-1.,1.);//Beamspot
+    sip2dToBSH_ = ibook.book1D("sip2dToBS", "IP significance in 2d To BS",200,-10,10);
+  
+    dcaForPt4to5H_ = ibook.book1D("dcaForPt4to5", "DCA To PV for pt 4 to 5 GeV",1000,-1.0,1.0);
+    dcaForPt14to15H_ = ibook.book1D("dcaForPt14to15", "DCA To PV for pt 14 to 15 GeV",1000,-1.0,1.0);
+    dcaForPt49to50H_ = ibook.book1D("dcaForPt49to50", "DCA To PV for pt 49 to 50 GeV",1000,-1.0,1.0);
+
+    ip2dForPt4to5H_ = ibook.book1D("ip2dForPt4to5", "IP in 2d To PV for pt 4 to 5 GeV",1000,-1.0,1.0); // IPtools
+    ip2dForPt14to15H_ = ibook.book1D("ip2dForPt14to15", "IP in 2d To PV for pt 14 to 15 GeV",1000,-1.0,1.0);
+    ip2dForPt49to50H_ = ibook.book1D("ip2dForPt49to50", "IP in 2d To PV for pt 49 to 50 GeV",1000,-1.0,1.0);
+
     nvalidTrackerHitsH_ = ibook.book1D("nvalidTrackerhits", "No. of Valid Tracker Hits",47,-0.5,46.5);
     nvalidPixelHitsH_ = ibook.book1D("nvalidPixelHits", "No. of Valid Hits in Pixel",8,-0.5,7.5);
     nvalidPixelBHitsH_ = ibook.book1D("nvalidPixelBarrelHits", "No. of Valid Hits in Pixel Barrel",6,-0.5,5.5);
@@ -296,7 +312,7 @@ void StandaloneTrackMonitor::bookHistograms(DQMStore::IBooker &ibook, edm::Run c
     nlostHitsH_ = ibook.book1D("nlostHits", "No. of Lost Hits",10,-0.5,9.5);
 
     beamSpotXYposH_ = ibook.book1D("beamSpotXYpos", "XY position of beam spot",40,-4.0,4.0);
-    beamSpotXYposerrH_ = ibook.book1D("beamSpotXYposerr", "Error in XY position of beam spot",20,0.0,4.0);
+    beamSpotXYposerrH_ = ibook.book1D("beamSpotXYposerr", "Error in XY position of beam spot",50,0.0,4.0);
     beamSpotZposH_ = ibook.book1D("beamSpotZpos", "Z position of beam spot",100,-20.0,20.0);
     beamSpotZposerrH_ = ibook.book1D("beamSpotZposerr", "Error in Z position of beam spot", 50, 0.0, 5.0);
 
@@ -1029,9 +1045,14 @@ void StandaloneTrackMonitor::analyze(edm::Event const& iEvent, edm::EventSetup c
 	  //std::cout << "iperr3dtopv : " << iperr3dToPV << std::endl;
 	}
 	
-	if(ip2d.first) sip2dToPV = ip2d.second.value()/ip2d.second.error();
+	double ip2dToPV = 0 , iperr2dToPV = 0;
+	if(ip2d.first) {
+	  ip2dToPV = ip2d.second.value();
+	  iperr2dToPV = ip2d.second.error();
+	  sip2dToPV = ip2d.second.value()/ip2d.second.error();}
         double sipDxyToPV = track.dxy(pv.position())/track.dxyError();
-	double sipDzToPV = track.dz(pv.position())/track.dzError();				             
+	double sipDzToPV = track.dz(pv.position())/track.dzError();	  
+		             
 	
 	// Fill the histograms
 	trackEtaH_->Fill(eta, wfac);
@@ -1074,16 +1095,33 @@ void StandaloneTrackMonitor::analyze(edm::Event const& iEvent, edm::EventSetup c
 	vertexZposH_->Fill(vz, wfac);
 	
         DistanceOfClosestApproachToPVH_->Fill(distanceOfClosestApproachToPV);
+	DistanceOfClosestApproachToPVVsPtH_->Fill(pt, distanceOfClosestApproachToPV);
+	DistanceOfClosestApproachToPVVsPtH_->Fill(eta, distanceOfClosestApproachToPV);
 	DistanceOfClosestApproachToPVVsPhiH_->Fill(phi, distanceOfClosestApproachToPV);
 	xPointOfClosestApproachVsZ0wrtPVH_->Fill(positionZ0, xPointOfClosestApproachwrtPV);
 	yPointOfClosestApproachVsZ0wrtPVH_->Fill(positionZ0, yPointOfClosestApproachwrtPV);
 	
+	ip2dToPVH_->Fill(ip2dToPV);
+	iperr2dToPVH_->Fill(iperr2dToPV);
 	ip3dToPVH_->Fill(ip3dToPV);
 	iperr3dToPVH_->Fill(iperr3dToPV);
 	sip3dToPVH_->Fill(sip3dToPV);
 	sip2dToPVH_->Fill(sip2dToPV);
 	sipDxyToPVH_->Fill(sipDxyToPV);
 	sipDzToPVH_->Fill(sipDzToPV);
+
+	ip2dToBSH_->Fill(dxy);
+	sip2dToBSH_->Fill(dxy/dxyError);
+
+	// For Long Wang's study : Tracking POG : 15/11/2021
+
+	if (pt > 4 && pt < 5) dcaForPt4to5H_->Fill(distanceOfClosestApproachToPV); // general track.dxy
+	if (pt > 14 && pt < 15) dcaForPt14to15H_->Fill(distanceOfClosestApproachToPV);
+	if (pt > 49 && pt < 50) dcaForPt49to50H_->Fill(distanceOfClosestApproachToPV);
+
+	if (pt > 4 && pt < 5) ip2dForPt4to5H_->Fill(ip2dToPV); // IPtools
+	if (pt > 14 && pt < 15) ip2dForPt14to15H_->Fill(ip2dToPV);
+	if (pt > 49 && pt < 50) ip2dForPt49to50H_->Fill(ip2dToPV);
        	
         double trackerLayersWithMeasurement = hitp.trackerLayersWithMeasurement();
 	double pixelLayersWithMeasurement = hitp.pixelLayersWithMeasurement();
