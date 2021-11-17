@@ -90,11 +90,23 @@ Re-run step1 and step2, get the MC step2 output after PU reweight
 
 Go to DQM/TrackingMonitorSource/Scripts
 
-edit .txt files accordingly 
+edit filelist_run3.txt, Put data step2 file in *:Data* row and MC step2 file in *:MC* row
+
+edit run numbers/ folder in two root macros accordingly
 
 ```
-root -b -l datamccomparison.C
-root -b -l compareprofile.C
+root -b -l 
+.L datamccomparison_run3.C
+datamccomparison_run3(""2017)
+.q
+
+root -b -l 
+.L compareprofile_run3.C
+compareprofile_run3(""2017)
+.q
+
+mkdir plots
+mv *.png plots
 ```
 
 
