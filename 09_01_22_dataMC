@@ -2,6 +2,7 @@
 
 CMSSW release : CMSSW_12_1_1
 MC : /RelValMinBias_900GeV/CMSSW_12_1_1-121X_mcRun3_2021_realistic_forpp900GeV_v3-v1/GEN-SIM-RECO , GT : 121X_mcRun3_2021_realistic_forpp900GeV_v3
+Updated MC with corrected vertex smearing : /RelValMinBias_900GeV/CMSSW_12_1_1-121X_mcRun3_2021_realistic_forpp900GeV_v4_correctGT-v1/GEN-SIM-RECO, GT : 121X_mcRun3_2021_realistic_forpp900GeV_v4
 Data (Min Bias) : /MinimumBias/CMSSW_12_1_1-2021_12_14_20_04_PRnewco_121X_dataRun3_v13-v1/RECO  , GT : 121X_dataRun3_v13
 Data (ZeroBias) : /ZeroBias/CMSSW_12_1_1-2021_12_14_20_04_PRnewco_121X_dataRun3_v13-v1/RECO  , GT : 121X_dataRun3_v13
 
