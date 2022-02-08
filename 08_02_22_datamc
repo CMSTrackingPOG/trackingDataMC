@@ -1,0 +1,42 @@
+For 2017 : 
+
+cmsrel CMSSW_10_6_2
+cd CMSSW_10_6_2/src
+cmsenv
+
+git cms-addpkg DQM/TrackingMonitorSource/
+
+cd DQM/TrackingMonitorSource/
+
+cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_2/src/DQM/TrackingMonitorSource/plugins .
+cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_2/src/DQM/TrackingMonitorSource/interface .
+cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_2/src/DQM/TrackingMonitorSource/python .
+
+scram b
+
+cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_2/src/DQM/TrackingMonitorSource/Jobs/Run2017_UL/data/
+
+The main analyzer is : plugins/StandaloneTrackMonitor.cc
+
+The main cfi and cff is : python/StandaloneTrackMonitor_cfi.py  , python/TrackingDataMCValidation_Standalone_cff.py
+
+To run : 
+
+cd /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_2/src/DQM/TrackingMonitorSource/Jobs/Run2017_UL/data/ZeroBias
+
+voms-proxy-init --voms cms --valid 192:00
+sh createjob.sh (This submits the job)
+
+To get final dqm file, when jobs are done : cmsRun step2_cfg.py
+
+Similar stuffs for ../data/NuGun
+
+When data and MC are done : 
+cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_8_patch1/src/DQM/TrackingMonitorSource/Scripts
+
+edit filelist_align_17.txt  for 2017 ZeroBias , change the Data and MC row. 
+
+root -b -l 
+.L datamccomparison_align.C  ( for ZeroBias)
+datamccomparison_align("2017") ( for 2017)
+
