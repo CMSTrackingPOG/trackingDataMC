@@ -31,6 +31,8 @@ To get final dqm file, when jobs are done : cmsRun step2_cfg.py
 
 Similar stuffs for ../data/NuGun
 
+for 2016 old APV : use cmsrel CMSSW_10_6_8_patch1 and repeat the steps.
+
 When data and MC are done : 
 cp -r /afs/cern.ch/work/p/ppalit/public/Data_MC/forgitpush/CMSSW_10_6_8_patch1/src/DQM/TrackingMonitorSource/Scripts
 
