@@ -11,7 +11,7 @@ voms-proxy-init --voms cms --valid 192:00
 ```
 to use your GRID certificate. This creates a file which is stored in the /tmp folder of the machine in which it was run (you will need to copy this file to afs for MC processing, as it is configured to run on htcondor)
 
-## Data processing
+#### Data processing
 
 Once you have done everything, you should be in the folder $CMSSW_BASE/src/DQM/TrackingMonitorSource/test, and you should have, among others, the data/ and MC/ folders. Inside data you will find the python CMSSW configuration files for ZeroBias, Z into muons and Z into electrons processing. You first do:
 
@@ -61,7 +61,7 @@ condor_submit step2.sub
 
 so that a job is submitted to batch instead.
 
-##MC processing
+#### MC processing
 
 MC processing is instead configured to run on htcondor (at least the step1). First:
 
@@ -118,7 +118,7 @@ which will create the file with all the histograms for data (which you can then 
 
 For MC, this whole sequence needs to be run twice (as also explained in step1_cfg.py.tmpl), once to create the histograms without PU reweighting, to get the PU distribution in the MC dataset you chose, then with the PU reweighting after you have derived the file with the weights. To do this in change *process.standaloneTrackMonitorMC.doPUCorrection = cms.untracked.bool(True)* to *False* before PU reweight step1_cfg.py.tmpl
 
-##PU Reweighting
+#### PU Reweighting
 
 Go to DQM/TrackingMonitorSource/test/Scripts/
 
@@ -136,7 +136,7 @@ For ZtoMuMu or ZtoEE MC datasets, exact same file of *standaloneTrackMonitorMC* 
 
 Re-run step1 and step2, get the MC step2 output after PU reweight
 
-####Instructions for plotting
+#### Instructions for plotting
 
 Go to DQM/TrackingMonitorSource/test/Scripts. Here you have plotting scripts for each process, *_ZMM.C, *_ZEE.C, *ZeroBias.C
 
