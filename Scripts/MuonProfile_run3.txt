@@ -1,0 +1,64 @@
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsStripDVsEta:Track #eta:No of hits in SiStrip (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsStripSVsEta:Track #eta:No of hits in SiStrip (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTECDVsEta:Track #eta:No of hits in TEC (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTECSVsEta:Track #eta:No of hits in TEC (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTIBDVsEta:Track #eta:No of hits in TIB (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTIBSVsEta:Track #eta:No of hits in TIB (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTIDDVsEta:Track #eta:No of hits in TID (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTIDSVsEta:Track #eta:No of hits in TID (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTOBDVsEta:Track #eta:No of hits in TOB (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nHitsTOBSVsEta:Track #eta:No of hits in TOB (Single-sided) per track:l:lin
+#####LostHits#####
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsVsCosTheta:Track cos(Theta):No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsVsEta:Track #eta:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsVsPhi:Track #phi:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsVspT:Track pT:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixBVsEta:Track #eta:No of lost hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixEVsEta:Track #eta:No of lost hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixVsEta:Track #eta:No of lost hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsStripVsEta:Track #eta:No of lost hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTIBVsEta:Track #eta:No of lost hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTOBVsEta:Track #eta:No of lost hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTIDVsEta:Track #eta:No of lost hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTECVsEta:Track #eta:No of lost hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixBVsPhi:Track #phi:No of lost hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixEVsPhi:Track #phi:No of lost hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsPixVsPhi:Track #phi:No of lost hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsStripVsPhi:Track #phi:No of lost hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTIBVsPhi:Track #phi:No of lost hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTOBVsPhi:Track #phi:No of lost hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTIDVsPhi:Track #phi:No of lost hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nLostHitsTECVsPhi:Track #phi:No of lost hits in TEC per track:l:lin
+#####ValidHits######
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixBVsEta:Track #eta:No of valid hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixEVsEta:Track #eta:No of valid hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixVsEta:Track #eta:No of valid hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsStripVsEta:Track #eta:No of valid hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTIBVsEta:Track #eta:No of valid hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTOBVsEta:Track #eta:No of valid hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTIDVsEta:Track #eta:No of valid hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTECVsEta:Track #eta:No of valid hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixBVsPhi:Track #phi:No of valid hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixEVsPhi:Track #phi:No of valid hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsPixVsPhi:Track #phi:No of valid hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsStripVsPhi:Track #phi:No of valid hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTIBVsPhi:Track #phi:No of valid hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTOBVsPhi:Track #phi:No of valid hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTIDVsPhi:Track #phi:No of valid hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsTECVsPhi:Track #phi:No of valid hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsVsCosTheta:Track cos(Theta):No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsVsEta:Track #eta:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsVsPhi:Track #phi:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsVsnVtx:No. of vertex:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:nValidHitsVspT:Track pT:No of valid hits per track:l:lin
+#####DCA & SIP plot#####
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:DistanceOfClosestApproachToPVVsPt:Track pt:Track dxy wrt PV:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:DistanceOfClosestApproachToPVVsEta:Track #eta:Track dxy wrt PV:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:DistanceOfClosestApproachToPVVsPhi:Track #phi:Track dxy wrt PV:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:xPointOfClosestApproachVsZ0wrtPV:Z0 of PV:x Point of Closest Approach to PV:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:yPointOfClosestApproachVsZ0wrtPV:Z0 of PV:y Point of Closest Approach to PV:l:lin
+#####Track chi2 plot#####
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:trackChi2oNDFVsEta:Track #eta:#chi^{2}/NDF / 0.1:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:trackChi2oNDFVsPhi:Track #phi:#chi^{2}/NDF:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:trackChi2probVsEta:Track #eta:#chi^{2} probability / 0.1:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/:trackChi2probVsPhi:Track #phi:#chi^{2} probability:l:lin

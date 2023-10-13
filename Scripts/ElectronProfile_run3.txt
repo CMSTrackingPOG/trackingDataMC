@@ -1,0 +1,64 @@
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsStripDVsEta:Track #eta:No of hits in SiStrip (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsStripSVsEta:Track #eta:No of hits in SiStrip (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTECDVsEta:Track #eta:No of hits in TEC (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTECSVsEta:Track #eta:No of hits in TEC (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTIBDVsEta:Track #eta:No of hits in TIB (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTIBSVsEta:Track #eta:No of hits in TIB (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTIDDVsEta:Track #eta:No of hits in TID (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTIDSVsEta:Track #eta:No of hits in TID (Single-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTOBDVsEta:Track #eta:No of hits in TOB (Double-sided) per track:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nHitsTOBSVsEta:Track #eta:No of hits in TOB (Single-sided) per track:l:lin
+#####LostHits#####
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsVsCosTheta:Track cos(Theta):No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsVsEta:Track #eta:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsVsPhi:Track #phi:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsVspT:Track pT:No of lost hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixBVsEta:Track #eta:No of lost hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixEVsEta:Track #eta:No of lost hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixVsEta:Track #eta:No of lost hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsStripVsEta:Track #eta:No of lost hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTIBVsEta:Track #eta:No of lost hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTOBVsEta:Track #eta:No of lost hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTIDVsEta:Track #eta:No of lost hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTECVsEta:Track #eta:No of lost hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixBVsPhi:Track #phi:No of lost hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixEVsPhi:Track #phi:No of lost hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsPixVsPhi:Track #phi:No of lost hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsStripVsPhi:Track #phi:No of lost hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTIBVsPhi:Track #phi:No of lost hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTOBVsPhi:Track #phi:No of lost hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTIDVsPhi:Track #phi:No of lost hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nLostHitsTECVsPhi:Track #phi:No of lost hits in TEC per track:l:lin
+#####ValidHits######
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixBVsEta:Track #eta:No of valid hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixEVsEta:Track #eta:No of valid hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixVsEta:Track #eta:No of valid hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsStripVsEta:Track #eta:No of valid hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTIBVsEta:Track #eta:No of valid hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTOBVsEta:Track #eta:No of valid hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTIDVsEta:Track #eta:No of valid hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTECVsEta:Track #eta:No of valid hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixBVsPhi:Track #phi:No of valid hits in Pixel Barrel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixEVsPhi:Track #phi:No of valid hits in Pixel Endcap per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsPixVsPhi:Track #phi:No of valid hits in Pixel per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsStripVsPhi:Track #phi:No of valid hits in SiStrip per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTIBVsPhi:Track #phi:No of valid hits in TIB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTOBVsPhi:Track #phi:No of valid hits in TOB per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTIDVsPhi:Track #phi:No of valid hits in TID per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsTECVsPhi:Track #phi:No of valid hits in TEC per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsVsCosTheta:Track cos(Theta):No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsVsEta:Track #eta:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsVsPhi:Track #phi:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsVsnVtx:No. of vertex:No of valid hits per track:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:nValidHitsVspT:Track pT:No of valid hits per track:l:lin
+#####DCA & SIP plot#####
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:DistanceOfClosestApproachToPVVsPt:Track pt:Track dxy wrt PV:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:DistanceOfClosestApproachToPVVsEta:Track #eta:Track dxy wrt PV:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:DistanceOfClosestApproachToPVVsPhi:Track #phi:Track dxy wrt PV:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:xPointOfClosestApproachVsZ0wrtPV:Z0 of PV:x Point of Closest Approach to PV:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:yPointOfClosestApproachVsZ0wrtPV:Z0 of PV:y Point of Closest Approach to PV:l:lin
+#####Track chi2 plot#####
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:trackChi2oNDFVsEta:Track #eta:#chi^{2}/NDF / 0.1:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:trackChi2oNDFVsPhi:Track #phi:#chi^{2}/NDF:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:trackChi2probVsEta:Track #eta:#chi^{2} probability / 0.1:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/ElectronTracks/:trackChi2probVsPhi:Track #phi:#chi^{2} probability:l:lin

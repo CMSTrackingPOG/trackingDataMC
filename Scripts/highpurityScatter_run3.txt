@@ -1,0 +1,27 @@
+#####Track chi2 plot#####
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsEta2D:Track #eta:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsPhi2D:Track #phi:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsPt2D:Track pt:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnHits2D:nHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnTrackerHits2D:nTrackerHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnValidHits2D:nValidHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnLostHits2D:nLostHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnMissingInnerHits2D:nMissingInnerHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsnMissingOuterHits2D:nMissingOuterHits:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsAlgo2D:Track algo:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsOrigAlgo2D:Track original algo:#chi^{2} probability:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackChi2probVsStoppingSource2D:Track stopping source:#chi^{2} probability:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsEta2D:Track #eta:IP3D uncertainty:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsPt2D:Track pt:IP3D uncertainty:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsChi2prob2D:Track #chi^{2} probability:IP3D uncertainty:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsnHits2D:Track #Hits:IP3D uncertainty:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsnValidHits2D:Track #Valid Hits:IP3D uncertainty:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackIperr3dVsnLostHits2D:Track #Lost Hits:IP3D uncertainty:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsEta2D:Track #eta:SIP 2D:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsPt2D:Track pt:SIP 2D:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsChi2prob2D:Track #chi^{2} probability:SIP 2D:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsnHits2D:Track #Hits:SIP 2D:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsnValidHits2D:Track #Valid Hits:SIP 2D:l:lin
+#DQMData/Run 999999/StandaloneTrackMonitor/Run summary/highPurityTracks/:trackSip2dVsnLostHits2D:Track #Lost Hits:SIP 2D:l:lin
+
+
