@@ -13,10 +13,10 @@ to use your GRID certificate. This creates a file which is stored in the /tmp fo
 
 #### Data processing
 
-Once you have done everything, you should be in the folder $CMSSW_BASE/src/DQM/TrackingMonitorSource/test, and you should have, among others, the data/ and MC/ folders. Inside data you will find the python CMSSW configuration files for ZeroBias, Z into muons and Z into electrons processing. You first do:
+Once you have done everything, you should be in the folder $CMSSW_BASE/src/DQM/TrackingMonitorSource/test, and you should have, among others, the Data/ and MC/ folders. Inside Data you will find the python CMSSW configuration files for ZeroBias, Z into muons and Z into electrons processing. You first do:
 
 ```
-cd data/#FOLDER OF THE PROCESS YOU NEED
+cd Data/#FOLDER OF THE PROCESS YOU NEED
 ```
 
 then edit submit.py to pick the dataset you want to process, and modify the commented lines accordingly. Here you also need to put the JSON file with all the GOOD lumisections (they can be found here: https://cms-service-dqmdc.web.cern.ch/CAF/certification/, usually we want to use the Golden json, so that it contains only the lumisections certified as GOOD for all CMS subdetectors).

@@ -2,7 +2,7 @@
 #set -o nounset
 
 APPDIR= #TO BE SET TO THE OUTPUT OF "echo $CMSSW_BASE" AND "/src" NEEDS TO BE ADDED
-JOBDIR=$APPDIR/DQM/TrackingMonitorSource/test/MC/ZEE
+JOBDIR=$APPDIR/DQM/TrackingMonitorSource/test/trackingDataMC/MC/ZEE
 cd $APPDIR
 eval $(scramv1 runtime -sh)
 cd $JOBDIR

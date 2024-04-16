@@ -2,7 +2,7 @@
 #set -o nounset
 
 APPDIR=#PUT THE CMSSW AREA PATH 
-JOBDIR=$APPDIR/DQM/TrackingMonitorSource/test/data/ZeroBias
+JOBDIR=$APPDIR/DQM/TrackingMonitorSource/test/trackingDataMC/Data/ZeroBias
 cd $APPDIR
 eval $(scramv1 runtime -sh)
 cd $JOBDIR
