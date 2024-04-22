@@ -13,7 +13,7 @@ to use your GRID certificate. This creates a file which is stored in the /tmp fo
 
 #### Data processing
 
-Once you have done everything, you should be in the folder $CMSSW_BASE/src/DQM/TrackingMonitorSource/test, and you should have, among others, the Data/ and MC/ folders. Inside Data you will find the python CMSSW configuration files for ZeroBias, Z into muons and Z into electrons processing. You first do:
+Once you have done everything, you should be in the folder $CMSSW_BASE/src/DQM/TrackingMonitorSource/test, and you should have, among others, the Data/ and MC/ folders. Inside Data you will find the python CMSSW configuration files for ZeroBias, Z into muons, Z into electrons and Kshort and Lambda (using ZeroBias data) processing. You first do:
 
 ```
 cd Data/#FOLDER OF THE PROCESS YOU NEED
@@ -138,11 +138,11 @@ Re-run step1 and step2, get the MC step2 output after PU reweight
 
 #### Instructions for plotting
 
-Go to DQM/TrackingMonitorSource/test/Scripts. Here you have plotting scripts for each process, *_ZMM.C, *_ZEE.C, *ZeroBias.C
+Go to DQM/TrackingMonitorSource/test/Scripts. Here you have plotting scripts for each process, *_ZMM.C, *_ZEE.C, *_ZeroBias.C, *_ZeroBias_K0*.C, *_ZeroBias_Lambda*.C
 
 edit filelist_run3_#NAME OF THE PROCESS.txt, Put data step2 file in *:Data* row and MC step2 file in *:MC* row. The *:Data* and *:MC* labels can also be modified to show different text in the plots (for example *:Data*->*:Data 2023C*)
 
-The *Histolist_run3.txt and *Profile_run3.txt can be modified to produce plots for different distributions (for example if some histograms are added to StandaloneTrackMonitor.cc)
+The *Histolist_run3.txt and *Profile_run3.txt can be modified to produce plots for different distributions (for example if some histograms are added to StandaloneTrackMonitor.cc or DQM/TrackingMonitor/src/V0Monitor.cc)
 
 ```
 root -b -l 
@@ -158,6 +158,39 @@ compareprofile_run3("2017")
 mkdir plots
 mv *.png plots
 ```
+
+###### Specific instructions for plotting for Kshort and Lambda
+
+In this case you need to run (NAME OF PROCESS is either K0 or Lambda):
+
+```
+root -b -l 
+.L datamccomparison_run3_ZeroBias_#NAME OF PROCESS_Standalone.C
+datamccomparison_run3("2017")
+.q
+
+.L datamccomparison_run3_ZeroBias_#NAME OF PROCESS_Monitoring.C
+datamccomparison_run3("2017")
+.q
+
+root -b -l 
+.L compareprofile_run3_ZeroBias_#NAME OF PROCESS_Standalone.C
+compareprofile_run3("2017")
+.q
+
+root -b -l 
+.L compareprofile_run3_ZeroBias_#NAME OF PROCESS_Monitoring.C
+compareprofile_run3("2017")
+.q
+
+mkdir plots
+mv *.png plots
+mv *.pdf plots
+```
+
+This is because the macros with the "Standalone" suffix produce the comparison plots for the distributions given by StandaloneTrackMonitor.cc, while those with the "Monitoring" suffix are for DQM/TrackingMonitor/src/V0Monitor.cc
+
+(This can and probably should be optimized better)
 
 
 

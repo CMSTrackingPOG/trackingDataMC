@@ -1,0 +1,13 @@
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:n_vs_BX:BX:# events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:n_vs_LS:LS:# events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:n_vs_PU:# good PV:# events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:n_vs_lumi:inst. lumi x10^{30} [Hz cm^{-2}]:# events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_Lxy:L_{xy} w.r.t. PV [cm]:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_Lxy_wrtBS:L_{xy} w.r.t. BS [cm]:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_N:# v0:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_chi2oNDF:vertex normalized #chi^{2}:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_deltaMass:m-m_{PDG}/m_{PDG}:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_eta:#eta:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_mass:mass [GeV]:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_phi:#phi [rad]:events:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Lambda/:v0_pt:p_{T} [GeV]:events:l:lin

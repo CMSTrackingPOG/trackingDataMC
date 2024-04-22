@@ -1,0 +1,21 @@
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_BX:BX:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_PU:# good PV:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_deltaMass:m-m_{PDG}/m_{DPG}:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_eta:#eta:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_lumi:inst. lumi x10^{30} [Hz cm^{-2}]:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_Lxy_vs_pt:p_{T} [GeV]:L_{xy} [cm]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_N_vs_BX:BX:# v0:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_N_vs_LS:LS:# v0:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_N_vs_PU:# good PV:# v0:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_N_vs_lumi:inst. lumi x10^{30} [Hz cm^{-2}]:# v0:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_deltaMass_vs_BX:BX:m-m_{PDG}/m_{DPG}:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_deltaMass_vs_PU:# good PV:m-m_{PDG}/m_{DPG}:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_deltaMass_vs_eta:#eta:m-m_{PDG}/m_{DPG}:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_deltaMass_vs_lumi:inst. lumi x10^{30} [Hz cm^{-2}]:m-m_{PDG}/m_{PDG}:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_deltaMass_vs_pt:p_{T} [GeV]:m-m_{PDG}/m_{PDG}:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_BX:BX:mass [GeV]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_PU:# good PV:mass [GeV]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_eta:#eta:mass [GeV]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_lumi:inst. lumi x10^{30} [Hz cm^{-2}]:mass [GeV]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_p:p [GeV]:mass [GeV]:l:lin
+DQMData/Run 999999/StandaloneTrackMonitor/Run summary/V0Monitoring/Ks/:v0_mass_vs_pt:p_{T} [GeV]:mass [GeV]:l:lin

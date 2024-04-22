@@ -23,7 +23,7 @@ void tokenize(const string& str, vector<string>& tokens, const string& delimiter
 void openFiles(vector<TFile*>& v, vector<string>& l, const char* f, const string& yr);
 //void openFiles(vector<TFile*>& v, vector<string>& l, const char* filename="filelist_align_18.txt");
 void closeFiles(vector<TFile*>& v);
-void readHistograms(vector<string>& v, const char* filename="MuonHistolist_run3.txt");
+void readHistograms(vector<string>& v, const char* filename="k0Histolist_run3_standalone.txt");
 void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>& lglist, const vector<string>& tokens, const string& yr); 
 void compareHisto(const vector<TFile*>& v, const char* folder, const char* hname); 
 void datamccomparison_run3(string year) {
@@ -57,10 +57,10 @@ void compareHisto(const vector<TFile*>& v, const char* folder, const char* hname
   for (uint i = 0; i < v.size(); ++i) {
     TFile* f = v[i];
     //f->cd(folder);
-    if (i==0) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    if (i==1) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    if (i==2 || i==3 || i==4) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    if (i==0) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    if (i==1) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    if (i==2 || i==3 || i==4) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h = dynamic_cast<TH1F*>(gDirectory->Get(hname));
     if (!h) continue;
     h->SetMarkerColor(i);
@@ -94,22 +94,22 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
 
   string datafolder, yearinfo, luminfo;
   if (yr == "2016pre") {
-    datafolder = "DQMData/Run 278509/StandaloneTrackMonitor/Run summary/MuonTracks/";
+    datafolder = "DQMData/Run 278509/StandaloneTrackMonitor/Run summary/K0Tracks/";
     yearinfo   = "2016 Old APV settings"; 
     luminfo    = "0.30 fb^{-1} (13 TeV)";
   } 
   else if (yr == "2016post") {
-    datafolder = "DQMData/Run 278808/StandaloneTrackMonitor/Run summary/MuonTracks/";
+    datafolder = "DQMData/Run 278808/StandaloneTrackMonitor/Run summary/K0Tracks/";
     yearinfo   = "2016 New APV settings"; 
     luminfo    = "0.28 fb^{-1} (13 TeV)";
   } 
   else if (yr == "2017") {
-    datafolder = "DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/";
-    yearinfo   = "Z#rightarrow#mu#mu"; 
-    luminfo    = "17.9 fb^{-1} (13.6 TeV)"; //Modify to show the correct integrated luminosity
+    datafolder = "DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/";
+    yearinfo   = "K_{s} (ZeroBias)"; 
+    luminfo    = "13.6 TeV"; //Modify to show the correct integrated luminosity
   } 
   else if (yr == "2018") {
-    datafolder = "DQMData/Run 317626/StandaloneTrackMonitor/Run summary/MuonTracks/";
+    datafolder = "DQMData/Run 317626/StandaloneTrackMonitor/Run summary/K0Tracks/";
     yearinfo   = "2018"; 
     luminfo    = "0.53 fb^{-1} (13 TeV)";
   } 
@@ -173,15 +173,15 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
     TFile* f = v[i];
     //f->cd(folder.c_str());
     if (i==0) f->cd(datafolder.c_str()); // UL data
-    //if (i==1) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/"); // EOY data
-    if (i==2 ) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/"); // UL & EOY MC
-    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    //if (i==1) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/"); // EOY data
+    if (i==2 ) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/"); // UL & EOY MC
+    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
     if (hname == "ip3dToPV" || hname == "iperr3dToPV" ) h->Rebin(1.); // 5 
     if (hname == "nTracks") h->Rebin(10);
     if (hname == "sip3dToPV") h->Rebin(5); // 10
     if (hname == "DistanceOfClosestApproachToPV") h->Rebin(10);
-    if (hname == "DistanceOfClosestApproachToPVZoomed") h->Rebin(10);
+    if ((std::string(hname).find(std::string("to10cm"))!=std::string::npos)||(std::string(hname).find(std::string("to100"))!=std::string::npos)) h->Rebin(10);
     if ( hname == "sip2dToPV") h->Rebin(10);
     if ( hname == "trackChi2bynDOF") h->Rebin(2);
     //    if (hname == "nTracks") h->Rebin();
@@ -298,7 +298,7 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
   double fct = (tokens.size() > 6 && tokens[6] == "log") ? 6 : 1.25;
   h->SetMaximum(fct * hmax);
 
-  //f_eoyd->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/");  
+  //f_eoyd->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/");  
   //TH1F *h_eoyd = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
   //assert(h_eoyd);
 
@@ -356,10 +356,10 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
     if (!(i==1 || i==4)) continue;
     TFile* f = v[i];
     //f->cd(folder.c_str());
-    //if (i==0) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/"); // UL data
+    //if (i==0) f->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/"); // UL data
     if (i==1) f->cd(datafolder.c_str()); // EOY data
-    if (i==4) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/"); // UL & EOY MC
-    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    if (i==4) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/"); // UL & EOY MC
+    //if (i==1) f->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
     if (hname == "ip3dToPV" || hname == "iperr3dToPV") h->Rebin(5);
     if (hname == "nTracks" ) h->Rebin(10);
@@ -469,7 +469,7 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
   //double fct = (tokens.size() > 6 && tokens[6] == "log") ? 6 : 1.25;
   //h->SetMaximum(fct * hmax);
 
-  //f_eoyd->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/MuonTracks/");  
+  //f_eoyd->cd("DQMData/Run 999999/StandaloneTrackMonitor/Run summary/K0Tracks/");  
   TH1F *h_eoyd = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
   assert(h_eoyd);
 
@@ -536,9 +536,9 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
     if (i!= 2) continue;
     TFile* file = v[i];
     //file->cd(folder.c_str());
-    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    if (i==2) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/"); 
-    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    if (i==2) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/"); 
+    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h2 = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
     if (!h2) continue;
 
@@ -702,9 +702,9 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
     if (i!=4) continue;
     TFile* file = v[i];
     //file->cd(folder.c_str());
-    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    if (i==4) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/"); 
-    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    if (i==4) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/"); 
+    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h2 = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
     if (!h2) continue;
 
@@ -813,7 +813,7 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
 
   TFile* f_ulm = v.at(2);
   //f->cd(folder.c_str());                                                                                                                           
-  f_ulm->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+  f_ulm->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
 
   TH1F *h_ulm = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
   assert(h_ulm);
@@ -837,10 +837,10 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
     TFile* file = v[i];
     if (!(i==1 || i==4)) continue;
     //file->cd(folder.c_str());
-    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    //here i=0 will never be opened    //if (i==0) f->cd("DQMData/Run 251143/StandaloneTrackMonitor/Run summary/K0Tracks/");
     if (i==1) file->cd(datafolder.c_str());
-    if (i==4) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
-    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/MuonTracks/");
+    if (i==4) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
+    //if (i==1) file->cd("DQMData/Run 1/StandaloneTrackMonitor/Run summary/K0Tracks/");
     TH1F *h2 = dynamic_cast<TH1F*>(gDirectory->Get(hname.c_str()));
     if (!h2) continue;
 
@@ -928,20 +928,21 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
   
   char fname[256];
     sprintf(fname, "%s.png", hname.c_str());
-//sprintf(fname, "%s.pdf", hname.c_str());
+  canvas->Print(fname);
+    sprintf(fname, "%s.pdf", hname.c_str());
   canvas->Print(fname);
   cout << "Histo " << fname << " printed successfully" << endl;
   canvas->Clear();
 }
 //void openFiles(vector<TFile*>& v1, vector<string>& v2, const char* filename) {
 void openFiles(vector<TFile*>& v1, vector<string>& v2, const char* filename, const string& yr ) {
-  static const int BUF_SIZE = 512;
+  static const int BUF_SIZE = 300;
 
   //  if (yr == "2016pre") filename = "filelist_align_16pre.txt";
   if (yr == "2016pre") filename = "filelist_align_16pre_sm.txt";
   else if (yr == "2016post") filename = "filelist_align_16post.txt";
   //else if (yr == "2017") filename = "filelist_align_17.txt";
-  else if (yr == "2017") filename = "filelist13p6TeV_ZMM.txt";
+  else if (yr == "2017") filename = "filelist13p6TeV_ZeroBias_K0.txt";
   else if (yr == "2018") filename = "filelist_align_18.txt";
 
   // Open the file containing the datacards
@@ -975,7 +976,7 @@ void closeFiles(vector<TFile*>& v) {
   }
 }
 void readHistograms(vector<string>& v, const char* filename) {
-  static const int BUF_SIZE = 512;
+  static const int BUF_SIZE = 300;
 
   // Open the file containing the datacards
   ifstream fin(filename, ios::in);    

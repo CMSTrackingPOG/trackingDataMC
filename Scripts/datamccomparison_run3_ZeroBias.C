@@ -930,6 +930,7 @@ void compareHisto(TCanvas* canvas, const vector<TFile*>& v, const vector<string>
 //sprintf(fname, "%s.pdf", hname.c_str());
   canvas->Print(fname);
   cout << "Histo " << fname << " printed successfully" << endl;
+  canvas->Clear();
 }
 //void openFiles(vector<TFile*>& v1, vector<string>& v2, const char* filename) {
 void openFiles(vector<TFile*>& v1, vector<string>& v2, const char* filename, const string& yr ) {

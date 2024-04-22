@@ -1,0 +1,8 @@
+executable      = step2.sh
+arguments       = $(ClusterId)$(ProcId)
+output          = output/step2.out
+error           = error/step2.err
+log             = log/step2.log
+#+JobFlavour     = "testmatch"
++JobFlavour     = "nextweek"
+queue
