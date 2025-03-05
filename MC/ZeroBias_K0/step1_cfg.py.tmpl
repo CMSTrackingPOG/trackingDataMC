@@ -68,25 +68,19 @@ trackScaleFactorFile = 'PileupScaleFactor_999999_wrt_nVertex_MinBias.root'
 #process.standaloneTrackMonitorMC.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
 #process.standaloneTrackMonitorMC.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
 #process.standaloneTrackMonitorMC.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
-#process.standaloneTrackMonitorMuonMC.doPUCorrection = cms.untracked.bool(doPUCorrection)
-#process.standaloneTrackMonitorMuonMC.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
-#process.standaloneTrackMonitorMuonMC.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
-#process.standaloneTrackMonitorMuonMC.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
-
-####REDEFINING SEQUENCE FOR WRONG CONFIGURATION IN TrackingDataMCValidation_Standalone_cff.py
-
 process.standaloneTrackMonitorK0MC.doPUCorrection = cms.untracked.bool(doPUCorrection)
 process.standaloneTrackMonitorK0MC.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
 process.standaloneTrackMonitorK0MC.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
 process.standaloneTrackMonitorK0MC.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
+#process.standaloneTrackMonitorMCFPixHole.doPUCorrection = cms.untracked.bool(doPUCorrection)
+#process.standaloneTrackMonitorMCFPixHole.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
+#process.standaloneTrackMonitorMCFPixHole.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
+#process.standaloneTrackMonitorMCFPixHole.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
+process.standaloneTrackMonitorK0MCFPixHole.doPUCorrection = cms.untracked.bool(doPUCorrection)
+process.standaloneTrackMonitorK0MCFPixHole.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
+process.standaloneTrackMonitorK0MCFPixHole.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
+process.standaloneTrackMonitorK0MCFPixHole.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
 
-standaloneValidationK0sMC = cms.Sequence(
-    process.hltPathFilter
-    * process.selectedPrimaryVertices
-    * process.KShortEventSelector
-    * process.KshortTracks
-    * process.standaloneTrackMonitorK0MC
-    * process.KshortMonitor)
 
 process.analysis_step = cms.Path(standaloneValidationK0sMC)
 

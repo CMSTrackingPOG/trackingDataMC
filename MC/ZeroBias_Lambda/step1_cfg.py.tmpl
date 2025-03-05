@@ -68,6 +68,10 @@ process.standaloneTrackMonitorLambdaMC.doPUCorrection = cms.untracked.bool(doPUC
 process.standaloneTrackMonitorLambdaMC.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
 process.standaloneTrackMonitorLambdaMC.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
 process.standaloneTrackMonitorLambdaMC.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
+process.standaloneTrackMonitorLambdaMCFPixHole.doPUCorrection = cms.untracked.bool(doPUCorrection)
+process.standaloneTrackMonitorLambdaMCFPixHole.doTrackCorrection = cms.untracked.bool(doTrackCorrection)
+process.standaloneTrackMonitorLambdaMCFPixHole.puScaleFactorFile = cms.untracked.string(puScaleFactorFile)
+process.standaloneTrackMonitorLambdaMCFPixHole.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
 process.analysis_step = cms.Path(process.standaloneValidationLambdasMC)
 
 # Path and EndPath definitions
