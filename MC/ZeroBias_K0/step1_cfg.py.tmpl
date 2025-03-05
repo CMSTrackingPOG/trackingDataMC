@@ -82,7 +82,7 @@ process.standaloneTrackMonitorK0MCFPixHole.puScaleFactorFile = cms.untracked.str
 process.standaloneTrackMonitorK0MCFPixHole.trackScaleFactorFile = cms.untracked.string(trackScaleFactorFile)
 
 
-process.analysis_step = cms.Path(standaloneValidationK0sMC)
+process.analysis_step = cms.Path(process.standaloneValidationK0sMC)
 
 # Path and EndPath definitions
 process.endjob_step = cms.EndPath(process.endOfProcess)
